@@ -42,8 +42,12 @@ module.exports = {
 		  limit: 10000,
 		  // fallback to file-loader with this naming scheme
 		  name: 'img/[name]-[hash].[ext]'
-		}
-	}
+		},
+  },
+  {
+       test   : /\.woff|\.woff2|\.svg|.eot|\.ttf/,
+       loader : 'url?prefix=font/&limit=10000'
+  }
 	]
 },
   // if you are using babel-loader directly then
